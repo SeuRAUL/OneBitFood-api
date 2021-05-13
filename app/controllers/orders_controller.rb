@@ -3,11 +3,12 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
-    if @order.save
-      @order
-    else
-      render @order.errors, status: :unprocessable_entity
-    end
+    
+    render @order.errors, status: :unprocessable_entity unless @order.save
+    # if @order.save
+      # @order
+    # else
+    # end
   end
 
   def show

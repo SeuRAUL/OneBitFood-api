@@ -1,0 +1,26 @@
+POST http://localhost:3000/api/orders HTTP/1.1
+content-type: application/json
+
+{
+  "order" : {
+    "name": "Leonardo Scorza",
+    "phone_number": "19997098765",
+    "restaurant_id": 1,
+    "city": "Curitiba",
+    "neighborhood": "Tingui",
+    "street": "Verone Piccolli",
+    "number": "115",
+    "complement": "apartamento 4",
+    "order_products_attributes": [
+      { 
+        "quantity": 2,
+        "product_id": 2
+      }
+    ]
+  }
+}
+
+###
+
+GET http://localhost:3000/api/orders/4 HTTP/1.1
+content-type: application/json
